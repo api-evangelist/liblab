@@ -1,0 +1,30 @@
+aid: liblab
+name: liblab
+segments:
+  - SDKs
+description: >-
+  liblab generates and publishes type-safe idiomatic SDKs in multiple languages from OpenAPI specs with CI/CD integration.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - SDKs
+created: '2026-03-03'
+modified: '2026-03-03'
+url: https://raw.githubusercontent.com/api-evangelist/liblab/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: liblab:liblab
+    name: liblab
+    description: >-
+      liblab generates and publishes type-safe idiomatic SDKs in multiple languages from OpenAPI specs with CI/CD integration.
+    humanURL: https://example.com
+    tags:
+      - SDKs
+    properties:
+      - type: Documentation
+        url: https://example.com
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
