@@ -9,11 +9,11 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - SDKs
-  - SDK Generation
   - Code Generation
-  - OpenAPI
   - Developer Tools
+  - OpenAPI
+  - SDK Generation
+  - SDKs
 created: '2026-03-03'
 modified: '2026-03-16'
 url: https://raw.githubusercontent.com/api-evangelist/liblab/refs/heads/main/apis.yml
@@ -26,11 +26,11 @@ apis:
       languages from OpenAPI specs with CI/CD integration.
     humanURL: https://liblab.com/
     tags:
-      - SDKs
-      - SDK Generation
       - Code Generation
-      - OpenAPI
       - Developer Tools
+      - OpenAPI
+      - SDK Generation
+      - SDKs
     properties:
       - type: Documentation
         url: https://liblab.com/docs
