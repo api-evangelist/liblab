@@ -1,5 +1,5 @@
 aid: liblab
-name: liblab
+name: Liblab
 segments:
   - SDKs
 description: >-
@@ -20,7 +20,7 @@ url: https://raw.githubusercontent.com/api-evangelist/liblab/refs/heads/main/api
 specificationVersion: '0.19'
 apis:
   - aid: liblab:liblab
-    name: liblab
+    name: Liblab
     description: >-
       liblab generates and publishes type-safe idiomatic SDKs in multiple
       languages from OpenAPI specs with CI/CD integration.
