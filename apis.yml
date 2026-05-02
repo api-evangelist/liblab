@@ -15,7 +15,7 @@ tags:
   - SDK Generation
   - SDKs
 created: '2026-03-03'
-modified: '2026-03-16'
+modified: '2026-04-28'
 url: https://raw.githubusercontent.com/api-evangelist/liblab/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
@@ -38,6 +38,8 @@ apis:
         url: https://liblab.com/docs/get-started/quickstart-generate-sdk
       - type: Portal
         url: https://app.liblab.com/
+      - type: Hub
+        url: https://hub.liblab.com/
 common:
   - type: Website
     url: https://liblab.com/
@@ -65,6 +67,8 @@ common:
     url: https://liblab.com/privacy-policy
   - type: TermsOfService
     url: https://liblab.com/terms
+  - type: Hub
+    url: https://hub.liblab.com/
   - type: GitHubOrganization
     url: https://github.com/liblaber
   - type: Twitter
