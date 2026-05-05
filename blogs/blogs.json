@@ -1,0 +1,13 @@
+{
+  "repo": "liblab",
+  "feeds": [
+    {
+      "source": "https://liblab.com/blog",
+      "feed_url": "https://liblab.com/blog/rss.xml",
+      "saved": 10,
+      "title": "Generate SDKs for your API with liblab Blog"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:30:27Z"
+}
