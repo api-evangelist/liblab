@@ -15,7 +15,7 @@ tags:
   - SDK Generation
   - SDKs
 created: '2026-03-03'
-modified: '2026-04-28'
+modified: '2026-05-19'
 url: https://raw.githubusercontent.com/api-evangelist/liblab/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
@@ -75,6 +75,9 @@ common:
     url: https://x.com/LibLaber
   - type: LinkedIn
     url: https://www.linkedin.com/company/liblaber
+  - name: MCP Server
+    url: https://liblab.com/blog/mcp-generator
+    type: MCPServer
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
