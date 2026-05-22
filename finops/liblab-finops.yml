@@ -8,33 +8,45 @@ alignedWith:
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 provider: Liblab
 providerId: liblab
-publisherName: Liblab
-serviceCategory: API
+publisherName: Liblab (a Postman company)
+serviceCategory: Developer Tools / SDK Generation
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-22'
 tags:
+  - SDK Generation
+  - MCP
   - Code Generation
   - Developer Tools
-  - OpenAPI
-  - SDK Generation
-  - SDKs
   - FinOps
-  - Cost Management
   - FOCUS
-description: FinOps framework definition for the Liblab API surface. Provides a FOCUS-aligned mapping
-  for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
+description: >-
+  FOCUS-aligned FinOps view of Liblab. Liblab is an SDK-generation and
+  MCP-server-generation platform; cost is driven primarily by (a) metered
+  MCP calls against generated MCP servers and (b) contracted SDK-generation
+  seats / build volumes negotiated with sales. There is no public per-API
+  request meter the way a transactional API would have. liblab joined
+  Postman in November 2025, so future billing surfaces may consolidate
+  under the Postman invoice.
 principles:
   - name: Visibility
-    description: Make API consumption costs visible to engineering, product, and finance teams in near
-      real-time.
+    description: >-
+      Show MCP-call consumption per workspace and per generated server so
+      product, engineering, and finance can see who is driving AI-agent
+      usage of the underlying API.
   - name: Allocation
-    description: Tag every chargeable API call with the consuming team, environment, application, and
-      feature so cost can be allocated.
+    description: >-
+      Tag each MCP server (and the SDK pipeline that fed it) with the
+      consuming team, application, and downstream API so cost can be
+      chargedback to the right business owner.
   - name: Optimization
-    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
-      cost per useful unit of work.
+    description: >-
+      Evaluate SDK target-language scope, MCP call patterns (caching,
+      batching, prompt design), and tier selection to reduce $-per-useful
+      agent action.
   - name: Accountability
-    description: Establish budget owners and chargeback or showback flows for each consuming team.
+    description: >-
+      Set budget owners per generated MCP server and per SDK repo, with
+      monthly chargeback or showback to the consuming team.
 domains:
   - name: Understand Usage and Cost
     capabilities:
@@ -51,10 +63,8 @@ domains:
       - Unit Economics
   - name: Optimize Usage and Cost
     capabilities:
-      - Architecting for Cloud
       - Rate Optimization
       - Workload Optimization
-      - Cloud Sustainability
       - Licensing and SaaS
   - name: Manage the FinOps Practice
     capabilities:
@@ -62,9 +72,8 @@ domains:
       - FinOps Education and Enablement
       - Invoicing and Chargeback
       - Onboarding Workloads
-      - Intersecting Disciplines
 billingModel:
-  pricingCategory: Usage-Based
+  pricingCategory: Usage-Based + Subscription
   billingFrequency: Monthly
   billingCurrency: USD
   chargeCategories:
@@ -76,58 +85,77 @@ billingModel:
   chargeFrequency: Recurring
 focusColumns:
   ServiceName: Liblab
-  ServiceCategory: Developer Tools / API
+  ServiceCategory: Developer Tools / SDK Generation
   ProviderName: Liblab
-  PublisherName: Liblab
+  PublisherName: Liblab (a Postman company)
   InvoiceIssuerName: Liblab
-  PricingCategory: Usage-Based
-  PricingUnit: request
+  PricingCategory: Usage-Based + Subscription
+  PricingUnit: mcp_call OR sdk_seat
   BillingCurrency: USD
   ChargeCategory: Usage
 meters:
-  - name: api_requests
-    description: Count of billable API requests
-    unit: request
+  - name: mcp_calls
+    description: Count of billable MCP server invocations
+    unit: call
     aggregation: sum
     dimensions:
-      - api
-      - endpoint
+      - workspace
+      - mcp_server
+      - underlying_api
+      - client
       - tier
-      - region
-      - consumer
-  - name: data_egress
-    description: Bytes returned over the network in API responses
-    unit: GB
+  - name: sdk_builds
+    description: Count of SDK builds run via portal or CI/CD (contract-metered)
+    unit: build
     aggregation: sum
     dimensions:
-      - api
-      - region
-      - consumer
-  - name: compute_seconds
-    description: Server-side compute consumed by the request, where applicable
-    unit: second
-    aggregation: sum
+      - workspace
+      - spec
+      - language
+      - environment
+  - name: sdk_seats
+    description: Active liblab portal seats (contract-metered)
+    unit: seat
+    aggregation: avg
     dimensions:
-      - api
-      - endpoint
-      - tier
+      - workspace
+      - role
+  - name: target_languages
+    description: Distinct SDK target languages generated per workspace
+    unit: language
+    aggregation: countDistinct
+    dimensions:
+      - workspace
+      - spec
 apis:
-  - name: Liblab
-    baseURL: ''
+  - name: Liblab SDK Generator
+    baseURL: https://app.liblab.com/
     tags:
-      - Code Generation
-      - Developer Tools
-      - OpenAPI
       - SDK Generation
-      - SDKs
-    serviceName: Liblab
-    serviceCategory: API
+      - CLI
+      - CI/CD
+    serviceName: Liblab SDK Generator
+    serviceCategory: Developer Tools
+  - name: Liblab MCP Generator
+    baseURL: https://liblab.com/blog/mcp-generator
+    tags:
+      - MCP
+      - AI Agents
+    serviceName: Liblab MCP Generator
+    serviceCategory: AI / MCP
 unitEconomics:
-  - name: Cost per 1K Requests
-    metric: billed_cost / (api_requests / 1000)
-    target: TBD
-  - name: Cost per Active Consumer
-    metric: billed_cost / active_consumers
+  - name: Cost per 100 MCP Calls
+    metric: billed_cost / (mcp_calls / 100)
+    target: '5.00'
+    notes: Matches published PAYG price ($5 / 100 calls).
+  - name: Cost per SDK Build
+    metric: billed_cost / sdk_builds
+    target: contract-defined
+  - name: Cost per Active Seat
+    metric: billed_cost / sdk_seats
+    target: contract-defined
+  - name: MCP Calls per Active Agent
+    metric: mcp_calls / active_agents
     target: TBD
 maintainers:
   - FN: Kin Lane

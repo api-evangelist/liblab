@@ -2,35 +2,51 @@ aid: liblab
 name: Liblab
 segments:
   - SDKs
+  - Code Generation
+  - Developer Tools
+  - MCP
 description: >-
-  liblab generates and publishes type-safe idiomatic SDKs in multiple languages from OpenAPI specs with CI/CD integration.
+  liblab generates and publishes type-safe, idiomatic SDKs in TypeScript,
+  Python, Java, .NET, Go, PHP, and Terraform from OpenAPI/Swagger/Postman
+  specs, plus MCP servers that expose those APIs to AI agents. The platform
+  ships a CLI, hosted portal, and CI/CD GitHub Action that publish SDKs to
+  customer repos via pull requests. liblab joined Postman in November 2025
+  to complete the API lifecycle.
 type: Index
 position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Code Generation
-  - Developer Tools
-  - OpenAPI
-  - SDK Generation
   - SDKs
+  - SDK Generation
+  - Code Generation
+  - OpenAPI
+  - Developer Tools
+  - MCP
+  - AI Agents
+  - Postman
+  - Terraform
+  - Developer Experience
 created: '2026-03-03'
-modified: '2026-05-19'
+modified: '2026-05-22'
 url: https://raw.githubusercontent.com/api-evangelist/liblab/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
   - aid: liblab:liblab
-    name: Liblab
+    name: Liblab SDK Generator
     description: >-
-      liblab generates and publishes type-safe idiomatic SDKs in multiple
-      languages from OpenAPI specs with CI/CD integration.
+      Cloud-based generator that produces customizable, type-safe SDKs in
+      seven target stacks (TypeScript, Python, Java, .NET, Go, PHP,
+      Terraform) from OpenAPI 2.0/3.0/3.1 or Postman Collections. CLI and
+      CI/CD workflows publish SDKs to customer GitHub repos as pull
+      requests.
     humanURL: https://liblab.com/
     tags:
-      - Code Generation
-      - Developer Tools
-      - OpenAPI
       - SDK Generation
-      - SDKs
+      - Code Generation
+      - OpenAPI
+      - CLI
+      - CI/CD
     properties:
       - type: Documentation
         url: https://liblab.com/docs
@@ -40,6 +56,59 @@ apis:
         url: https://app.liblab.com/
       - type: Hub
         url: https://hub.liblab.com/
+      - type: CLI
+        url: https://liblab.com/docs/cli/cli-overview
+      - type: GitHubAction
+        url: https://github.com/liblaber/liblab-sdk-updates
+      - type: SampleAPI
+        url: https://github.com/liblaber/simple-petstore-openapi
+  - aid: liblab:mcp-generator
+    name: Liblab MCP Generator
+    description: >-
+      Generates a complete Model Context Protocol (MCP) server from an
+      OpenAPI, Swagger, or Postman spec so AI chat clients (Claude,
+      Cursor, OpenAI) can call the underlying API in natural language.
+      Launched June 2025; first-year free tier covers 100 MCP calls per
+      month, then $5 per 100 calls.
+    humanURL: https://liblab.com/blog/mcp-generator
+    tags:
+      - MCP
+      - AI Agents
+      - Model Context Protocol
+      - OpenAPI
+    properties:
+      - type: Announcement
+        url: https://liblab.com/blog/2025-06-24-introducing-liblab-mcp-generator
+      - type: BlogPost
+        url: https://liblab.com/blog/mcp-generator
+      - type: Pricing
+        url: https://liblab.com/pricing
+  - aid: liblab:hub
+    name: Liblab Hub
+    description: >-
+      Public catalog of pre-generated SDKs (Python, TypeScript, C#, PHP)
+      for popular third-party APIs (Postman, RingCentral, NYT, UPS, NHL,
+      Pinnacle, OpenHue, Skyscanner, Voyado, Booking, etc.) used to
+      demonstrate generator output quality. Free to use.
+    humanURL: https://hub.liblab.com/
+    tags:
+      - SDKs
+      - Hub
+      - Catalog
+    properties:
+      - type: Hub
+        url: https://hub.liblab.com/
+  - aid: liblab:terraform-provider
+    name: Liblab Terraform Provider Generator
+    description: >-
+      Generates a Terraform provider from an OpenAPI specification,
+      enabling Infrastructure-as-Code workflows against any documented
+      API.
+    humanURL: https://liblab.com/docs
+    tags:
+      - Terraform
+      - Infrastructure
+      - Code Generation
 common:
   - type: Website
     url: https://liblab.com/
@@ -78,6 +147,31 @@ common:
   - name: MCP Server
     url: https://liblab.com/blog/mcp-generator
     type: MCPServer
+  - name: liblab-sdk-updates
+    type: GitHubAction
+    url: https://github.com/liblaber/liblab-sdk-updates
+  - type: HomebrewTap
+    url: https://github.com/liblaber/homebrew-liblab
+  - type: SampleOpenAPI
+    url: https://github.com/liblaber/simple-petstore-openapi
+  - name: ai-github-agent-example
+    type: AgentExample
+    url: https://github.com/liblaber/ai-github-agent-example
+  - name: build-a-rag-ai-app-template
+    type: RAGTemplate
+    url: https://github.com/liblaber/build-a-rag-ai-app-template
+  - name: ai
+    type: AgentRepo
+    url: https://github.com/liblaber/ai
+  - type: Plans
+    url: https://raw.githubusercontent.com/api-evangelist/liblab/main/plans/liblab-plans-pricing.yml
+  - type: RateLimits
+    url: https://raw.githubusercontent.com/api-evangelist/liblab/main/rate-limits/liblab-rate-limits.yml
+  - type: FinOps
+    url: https://raw.githubusercontent.com/api-evangelist/liblab/main/finops/liblab-finops.yml
+  - name: liblab joins Postman
+    type: Acquisition
+    url: https://liblab.com/blog/liblab-joins-postman-to-complete-the-api-lifecycle
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

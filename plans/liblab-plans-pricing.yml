@@ -4,138 +4,174 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Liblab
 providerId: liblab
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-22'
 tags:
-  - Code Generation
-  - Developer Tools
-  - OpenAPI
   - SDK Generation
-  - SDKs
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
+  - Code Generation
+  - OpenAPI
+  - MCP
+  - Developer Tools
+description: >-
+  Commercial plans for Liblab's SDK Generator, MCP Generator, and supporting
+  developer-experience tooling. Liblab does not bill on a request-per-API
+  basis the way an API provider does; it bills on SDK builds, target
+  languages, MCP server calls, and seats. Verified against
+  https://liblab.com/pricing (MCP tier) and the docs/portal. SDK Generator
+  pricing is sales-led and not published; values below marked "contact"
+  reflect that.
 plans:
-  - id: liblab-free
-    name: Free
+  - id: liblab-sdk-starter
+    name: SDK Generator - Starter / Trial
     type: freemium
-    description: Free entry tier for the Liblab API surface. Intended for evaluation, prototyping, and
-      low-volume integrations. Real limits and pricing must be reconciled with the provider's published
-      plan documentation.
+    description: >-
+      Entry-level access to the liblab SDK Generator for evaluation. Lets
+      a developer connect a single OpenAPI/Postman spec, run the CLI, and
+      generate SDKs in supported target languages via the hosted portal.
     entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
+      - label: Spec Inputs
+        description: Number of API specifications a workspace may register
+        name: specs
         type: quota
-        metric: requests
-        limit: 1000
+        metric: specs
+        limit: 1
         timeFrame: month
         geo: global
         domains: []
         unit: 1
         price: '0.00'
         userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
+      - label: SDK Languages
+        description: Target SDK languages available on the trial tier
+        name: languages
+        type: quota
+        metric: languages
+        limit: 7
+        timeFrame: forever
         geo: global
         domains: []
         unit: 1
         price: '0.00'
         userMultiplied: false
     elements:
-      - name: Public Documentation
+      - name: Hosted Portal Access
+      - name: liblab CLI
+      - name: TypeScript / Python / Java / .NET / Go / PHP / Terraform Targets
       - name: Community Support
-      - name: Sandbox Access
-      - name: Liblab
-  - id: liblab-pro
-    name: Professional
+  - id: liblab-sdk-business
+    name: SDK Generator - Business
     type: paid
-    description: Production tier for Liblab. Provides higher quotas, priority support, and access to the
-      broader API portfolio. Pricing placeholder; align with the provider's pricing page.
+    description: >-
+      Production tier for teams shipping SDKs to customers. Includes
+      automated CI/CD publishing via the liblab-sdk-updates GitHub Action,
+      generated documentation, and customization hooks. Pricing is
+      sales-led and not published on the liblab pricing page.
     entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
+      - label: Seats
+        description: Number of liblab portal users (contact sales)
+        name: seats
         type: quota
-        metric: requests
-        limit: 100000
+        metric: seats
+        limit: -1
         timeFrame: month
         geo: global
         domains: []
         unit: 1
-        price: TBD
+        price: contact
+        userMultiplied: true
+      - label: Specs
+        description: API specifications under management (contact sales)
+        name: specs
+        type: quota
+        metric: specs
+        limit: -1
+        timeFrame: month
+        geo: global
+        domains: []
+        unit: 1
+        price: contact
         userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
+    elements:
+      - name: All 7 SDK Targets
+      - name: CI/CD Auto-Publish (GitHub Action)
+      - name: Customization Hooks
+      - name: Generated SDK Documentation
+      - name: Email Support
+  - id: liblab-sdk-enterprise
+    name: SDK Generator - Enterprise
+    type: enterprise
+    description: >-
+      Custom-negotiated tier for enterprises with security, compliance,
+      and data-residency requirements. Includes named TAM, contractual
+      SLAs, and on-prem / private-tenancy options.
+    entries:
+      - label: Volume
+        description: Negotiated SDK build volume and language targets
+        name: builds
+        type: quota
+        metric: builds
+        limit: -1
+        timeFrame: month
+        geo: configurable
+        domains: []
+        unit: 1
+        price: custom
+        userMultiplied: false
+    elements:
+      - name: Dedicated Account Manager
+      - name: Contractual SLA
+      - name: Security & Compliance Review (SOC2)
+      - name: SSO / SAML
+      - name: Private Tenancy Options
+      - name: 24/7 Support
+  - id: liblab-mcp-free
+    name: MCP Generator - Free Tier
+    type: freemium
+    description: >-
+      First-year free tier for the liblab MCP Generator. Caps usage at
+      100 MCP calls per month. Source: liblab.com/pricing - "FREE 100 MCP
+      calls each month" / "Free tier (100 calls/month) available for first
+      year only."
+    entries:
+      - label: MCP Calls
+        description: Monthly MCP server invocations included free
+        name: mcp_calls
+        type: quota
+        metric: calls
         limit: 100
-        timeFrame: minute
+        timeFrame: month
         geo: global
         domains: []
         unit: 1
         price: '0.00'
         userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
+    elements:
+      - name: Private & Secure MCP Server
+      - name: Downloadable MCP Files
+      - name: OpenAPI / Swagger / Postman Inputs
+      - name: Claude / Cursor / OpenAI Client Compatibility
+  - id: liblab-mcp-payg
+    name: MCP Generator - Pay-As-You-Go
+    type: usage
+    description: >-
+      Metered tier for the liblab MCP Generator. Verbatim from
+      liblab.com/pricing - "$5 for every 100 calls."
+    entries:
+      - label: MCP Calls
+        description: Metered MCP server invocations
+        name: mcp_calls
         type: metered
-        metric: requests
+        metric: calls
         limit: -1
         timeFrame: month
         geo: global
         domains: []
-        unit: 1000
-        price: TBD
+        unit: 100
+        price: '5.00'
         userMultiplied: false
     elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: Liblab
-  - id: liblab-enterprise
-    name: Enterprise
-    type: enterprise
-    description: Custom-negotiated tier for Liblab. Includes dedicated capacity, contractual SLAs, security
-      review, data residency options, and named technical account management.
-    entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-    elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: Liblab
+      - name: No Commitment, Cancel Anytime
+      - name: Private & Secure
+      - name: All MCP Client Targets
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
