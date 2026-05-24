@@ -172,6 +172,8 @@ common:
   - name: liblab joins Postman
     type: Acquisition
     url: https://liblab.com/blog/liblab-joins-postman-to-complete-the-api-lifecycle
+  - type: LLMsTxt
+    url: https://liblab.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
