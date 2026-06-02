@@ -2,12 +2,24 @@
   "repo": "liblab",
   "feeds": [
     {
-      "source": "https://liblab.com/blog",
+      "source": "https://liblab.com/blog/atom.xml",
       "feed_url": "https://liblab.com/blog/atom.xml",
-      "title": "Generate SDKs for your API with liblab Blog",
-      "saved": 13
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://liblab.com/blog/2025-06-24-introducing-liblab-mcp-generator",
+      "error": "HTTPError"
+    },
+    {
+      "source": "https://liblab.com/docs/get-started/quickstart-generate-sdk",
+      "feed_url": "https://liblab.com/docs/get-started/quickstart-generate-sdk",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "post_count": 23,
-  "fetched": "2026-05-17T20:20:35Z"
+  "fetched": "2026-06-01T23:35:02Z"
 }
