@@ -126,7 +126,7 @@ common:
     url: https://liblab.com/contact
   - type: Portal
     url: https://app.liblab.com/
-  - type: SignUp
+  - type: Signup
     url: https://app.liblab.com/join
   - type: Developer
     url: https://liblab.com/developer
@@ -172,7 +172,7 @@ common:
   - name: liblab joins Postman
     type: Acquisition
     url: https://liblab.com/blog/liblab-joins-postman-to-complete-the-api-lifecycle
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://liblab.com/llms.txt
 maintainers:
   - FN: Kin Lane
