@@ -110,6 +110,8 @@ apis:
       - Infrastructure
       - Code Generation
 common:
+  - type: DomainSecurity
+    url: security/liblab-domain-security.yml
   - type: Website
     url: https://liblab.com/
   - type: Documentation

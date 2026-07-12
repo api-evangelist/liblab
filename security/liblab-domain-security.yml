@@ -1,0 +1,26 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: liblab.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 22 21:38:21 2026 GMT
+  hsts: false
+- host: app.liblab.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 19 04:03:26 2026 GMT
+  hsts: false
+- host: hub.liblab.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 19 04:03:26 2026 GMT
+  hsts: false
+domains:
+- domain: liblab.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
