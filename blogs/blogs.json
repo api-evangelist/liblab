@@ -13,7 +13,8 @@
       "feed_url": "https://liblab.com/docs/get-started/quickstart-generate-sdk",
       "title": "",
       "saved": 0,
-      "method": "none"
+      "method": "none",
+      "error": "parse_failed"
     },
     {
       "source": "https://liblab.com/blog/2025-06-24-introducing-liblab-mcp-generator",
@@ -21,5 +22,5 @@
     }
   ],
   "post_count": 23,
-  "fetched": "2026-08-06T14:08:46Z"
+  "fetched": "2026-08-15T12:11:08Z"
 }
