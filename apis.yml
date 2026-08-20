@@ -29,6 +29,17 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/liblab.png
 tags:
+  - SDK
+  - SDK Generation
+  - Code Generation
+  - OpenAPI
+  - Developer Tools
+  - MCP
+  - AI Agents
+  - Postman
+  - Terraform
+  - Developer Experience
+tags_raw:
   - SDKs
   - SDK Generation
   - Code Generation
@@ -86,6 +97,10 @@ apis:
     tags:
       - MCP
       - AI Agents
+      - OpenAPI
+    tags_raw:
+      - MCP
+      - AI Agents
       - Model Context Protocol
       - OpenAPI
     properties:
@@ -104,6 +119,10 @@ apis:
       demonstrate generator output quality. Free to use.
     humanURL: https://hub.liblab.com/
     tags:
+      - SDK
+      - Hub
+      - Catalog
+    tags_raw:
       - SDKs
       - Hub
       - Catalog
