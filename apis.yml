@@ -221,3 +221,6 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-parent: postman
+x-relationship: acquisition
+x-acquired: 2025
