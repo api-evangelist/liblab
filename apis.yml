@@ -152,6 +152,8 @@ apis:
       - Infrastructure
       - Code Generation
 common:
+  - type: VendorFacets
+    url: vendor-facets/liblab-vendor-facets.yml
   - type: DomainSecurity
     url: security/liblab-domain-security.yml
   - type: Website
