@@ -187,8 +187,10 @@ common:
 apis:
 - aid: liblab:liblab
   name: Liblab SDK Generator
-  description: Cloud-based generator that produces customizable, type-safe SDKs in seven target stacks (TypeScript, Python, Java, .NET, Go, PHP,
-    Terraform) from OpenAPI 2.0/3.0/3.1 or Postman Collections. CLI and CI/CD workflows publish SDKs to customer GitHub repos as pull requests.
+  description: >-
+    Cloud-based generator that produces customizable, type-safe SDKs in seven target stacks (TypeScript,
+    Python, Java, .NET, Go, PHP, Terraform) from OpenAPI 2.0/3.0/3.1 or Postman Collections. CLI and CI/CD
+    workflows publish SDKs to customer GitHub repos as pull requests.
   humanURL: https://liblab.com/
   tags:
   - SDK Generation
@@ -213,9 +215,10 @@ apis:
     url: https://github.com/liblaber/simple-petstore-openapi
 - aid: liblab:mcp-generator
   name: Liblab MCP Generator
-  description: Generates a complete Model Context Protocol (MCP) server from an OpenAPI, Swagger, or Postman spec so AI chat clients (Claude,
-    Cursor, OpenAI) can call the underlying API in natural language. Launched June 2025; first-year free tier covers 100 MCP calls per month,
-    then $5 per 100 calls.
+  description: >-
+    Generates a complete Model Context Protocol (MCP) server from an OpenAPI, Swagger, or Postman spec
+    so AI chat clients (Claude, Cursor, OpenAI) can call the underlying API in natural language. Launched
+    June 2025; first-year free tier covers 100 MCP calls per month, then $5 per 100 calls.
   humanURL: https://liblab.com/blog/mcp-generator
   tags:
   - MCP
@@ -235,8 +238,10 @@ apis:
     url: https://liblab.com/pricing
 - aid: liblab:hub
   name: Liblab Hub
-  description: Public catalog of pre-generated SDKs (Python, TypeScript, C#, PHP) for popular third-party APIs (Postman, RingCentral, NYT, UPS,
-    NHL, Pinnacle, OpenHue, Skyscanner, Voyado, Booking, etc.) used to demonstrate generator output quality. Free to use.
+  description: >-
+    Public catalog of pre-generated SDKs (Python, TypeScript, C#, PHP) for popular third-party APIs (Postman,
+    RingCentral, NYT, UPS, NHL, Pinnacle, OpenHue, Skyscanner, Voyado, Booking, etc.) used to demonstrate
+    generator output quality. Free to use.
   humanURL: https://hub.liblab.com/
   tags:
   - SDK
@@ -251,36 +256,122 @@ apis:
     url: https://hub.liblab.com/
 - aid: liblab:terraform-provider
   name: Liblab Terraform Provider Generator
-  description: Generates a Terraform provider from an OpenAPI specification, enabling Infrastructure-as-Code workflows against any documented
-    API.
+  description: >-
+    Generates a Terraform provider from an OpenAPI specification, enabling Infrastructure-as-Code workflows
+    against any documented API.
   humanURL: https://liblab.com/docs
   tags:
   - Terraform
   - Infrastructure
   - Code Generation
-- aid: liblab:howto-api
-  name: Liblab howto API
-  description: 'Liblab howto API as documented publicly: 8 operations. Contract generated from the documentation by API Evangelist (2026-10-04);
-    not the provider''s own document.'
-  humanURL: https://liblab.com/docs/howto
+- aid: liblab:liblab-api-docs-api
+  name: Liblab Api Docs API
+  description: The Api Docs API from Liblab — 1 operation(s) for api docs.
+  humanURL: https://liblab.com/
   baseURL: https://raw.githubusercontent.com
+  tags:
+  - Api Docs
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/liblab-howto-openapi-generated.yml
-    x-provenance: generated
-- aid: liblab:tutorials-api
-  name: Liblab tutorials API
-  description: 'Liblab tutorials API as documented publicly: 6 operations. Contract generated from the documentation by API Evangelist (2026-10-04);
-    not the provider''s own document.'
-  humanURL: https://liblab.com/docs/tutorials
-  baseURL: https://raw.githubusercontent.com
-  properties:
-  - type: OpenAPI
-    url: openapi/_ae-authored/liblab-tutorials-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/liblab-api-docs-api-openapi.yml
   - type: JSONSchema
     url: json-schema/liblab-get-collections-response-schema.json
-
+- aid: liblab:liblab-api-json-api
+  name: Liblab Api Json API
+  description: The Api Json API from Liblab — 1 operation(s) for api json.
+  humanURL: https://liblab.com/
+  baseURL: https://raw.githubusercontent.com
+  tags:
+  - Api Json
+  properties:
+  - type: OpenAPI
+    url: openapi/liblab-api-json-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/liblab-get-collections-response-schema.json
+- aid: liblab:liblab-collections-api
+  name: Liblab Collections API
+  description: The Collections API from Liblab — 2 operation(s) for collections.
+  humanURL: https://liblab.com/
+  baseURL: https://raw.githubusercontent.com
+  tags:
+  - Collections
+  properties:
+  - type: OpenAPI
+    url: openapi/liblab-collections-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/liblab-get-collections-response-schema.json
+- aid: liblab:liblab-docs-api
+  name: Liblab Docs API
+  description: The Docs API from Liblab — 1 operation(s) for docs.
+  humanURL: https://liblab.com/
+  baseURL: https://raw.githubusercontent.com
+  tags:
+  - Docs
+  properties:
+  - type: OpenAPI
+    url: openapi/liblab-docs-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/liblab-get-collections-response-schema.json
+- aid: liblab:liblab-github-linguist-api
+  name: Liblab Github Linguist API
+  description: The Github Linguist API from Liblab — 1 operation(s) for github linguist.
+  humanURL: https://liblab.com/
+  baseURL: https://raw.githubusercontent.com
+  tags:
+  - Github Linguist
+  properties:
+  - type: OpenAPI
+    url: openapi/liblab-github-linguist-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/liblab-get-collections-response-schema.json
+- aid: liblab:liblab-liblab-api-api
+  name: Liblab Liblab API
+  description: The Liblab API API from Liblab — 2 operation(s) for liblab api.
+  humanURL: https://liblab.com/
+  baseURL: https://raw.githubusercontent.com
+  tags:
+  - Liblab API
+  properties:
+  - type: OpenAPI
+    url: openapi/liblab-liblab-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/liblab-get-collections-response-schema.json
+- aid: liblab:liblab-liblaber-api
+  name: Liblab Liblaber API
+  description: The Liblaber API from Liblab — 3 operation(s) for liblaber.
+  humanURL: https://liblab.com/
+  baseURL: https://raw.githubusercontent.com
+  tags:
+  - Liblaber
+  properties:
+  - type: OpenAPI
+    url: openapi/liblab-liblaber-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/liblab-get-collections-response-schema.json
+- aid: liblab:liblab-schema-api
+  name: Liblab Schema API
+  description: The Schema API from Liblab — 1 operation(s) for schema.
+  humanURL: https://liblab.com/
+  baseURL: https://raw.githubusercontent.com
+  tags:
+  - Schema
+  properties:
+  - type: OpenAPI
+    url: openapi/liblab-schema-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/liblab-get-collections-response-schema.json
+- aid: liblab:liblab-open-api-api
+  name: Liblab Open API
+  description: The Open API API from Liblab — 2 operation(s) for open api.
+  humanURL: https://liblab.com/
+  baseURL: https://raw.githubusercontent.com
+  tags:
+  - Open API
+  properties:
+  - type: OpenAPI
+    url: openapi/liblab-open-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/liblab-get-collections-response-schema.json
 x-parent: postman
 
 x-relationship: acquisition

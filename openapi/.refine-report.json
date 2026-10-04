@@ -1,0 +1,35 @@
+{
+  "provider": "liblab",
+  "sources": [
+    "_ae-authored/liblab-openapi-generated.yml"
+  ],
+  "outputs": [
+    "liblab-api-docs-api-openapi.yml",
+    "liblab-api-json-api-openapi.yml",
+    "liblab-collections-api-openapi.yml",
+    "liblab-docs-api-openapi.yml",
+    "liblab-github-linguist-api-openapi.yml",
+    "liblab-liblab-api-api-openapi.yml",
+    "liblab-liblaber-api-openapi.yml",
+    "liblab-openapi-api-openapi.yml",
+    "liblab-schema-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "2 archived document(s) dropped as subsets of other archived documents",
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "liblab-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "liblab-openapi-generated.yml: tagged paths GET / -> Liblab API",
+    "liblab-openapi-generated.yml: tagged paths GET /api/schema/ -> Schema",
+    "liblab-openapi-generated.yml: tagged paths GET /api/{apiid} -> Liblab API",
+    "liblab-openapi-generated.yml: declared missing tag: Liblab API",
+    "liblab-openapi-generated.yml: declared missing tag: Schema",
+    "apis.yml register: written (+9 apis, 13 total)"
+  ],
+  "skipped": [
+    "_ae-authored/liblab-tutorials-openapi-generated.yml: archived document superseded by a larger archived document",
+    "_ae-authored/liblab-howto-openapi-generated.yml: archived document superseded by a larger archived document"
+  ]
+}

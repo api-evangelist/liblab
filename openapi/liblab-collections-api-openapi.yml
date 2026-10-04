@@ -1,0 +1,120 @@
+openapi: 3.2.0
+info:
+  title: Liblab Collections API
+  version: '2026-10-04'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-04: 14 operation(s) read from 21 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Liblab has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 16
+    documentation: -2
+    pages-with-code: 21
+    pages-read: 21
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-04'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://liblab.com/docs/tutorials/ci-cd/postman-api/index
+  - https://liblab.com/docs/tutorials/documentation/docusaurus-enhanced-api/index
+  - https://liblab.com/docs/howto/fastapi
+  - https://liblab.com/docs/howto/flask/index
+  - https://liblab.com/docs/howto/remix/index
+  - https://liblab.com/docs/howto/aspnet/index
+  - https://liblab.com/docs/howto/django/index
+  - https://liblab.com/docs/howto/go-goa/index
+  - https://liblab.com/docs/howto/nestjs/index
+  - https://liblab.com/docs/howto/nextjs/index
+  - https://liblab.com/docs/howto/fastapi/index
+  - https://liblab.com/docs/howto/fastify/index
+  - https://liblab.com/docs/howto/go-huma/index
+  - https://liblab.com/docs/howto/laravel/index
+  - https://liblab.com/docs/howto/spring-boot/index
+  - https://liblab.com/docs/tutorials/generate-sdks/sdk-for-fastapi
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-github-actions
+  - https://liblab.com/docs/tutorials/generate-sdks/sdk-for-fastapi/index
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-github-actions/index
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-gitlab-pipelines/index
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-jenkins-pipelines/index
+servers:
+- url: https://raw.githubusercontent.com
+security:
+- apiKey: []
+tags:
+- name: Collections
+paths:
+  /collections:
+    get:
+      operationId: get_collections
+      tags:
+      - Collections
+      summary: GET /collections
+      x-source: https://liblab.com/docs/tutorials/ci-cd/postman-api/index
+      parameters:
+      - name: apikey
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCollectionsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET \"https://api.getpostman.com/collections?apikey=<your_api_key>\" \n You will receive an array with all collections linked to your account. Identify the collection you want to use and copy its id . The following snippet presents an example of the response you can expect. \n { \"collections\" : [ { \"id\" : \"30107d04-5793-4bdd-9449-601be46cf6b2\" , \"name\" : \"Collection Name\" , \"owner\" : \"28471659"
+  /collections/${{:
+    get:
+      operationId: getCollections${{
+      tags:
+      - Collections
+      summary: GET /collections/${{
+      x-source: https://liblab.com/docs/tutorials/ci-cd/postman-api/index
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCollectionsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -s -H "X-API-Key: ${{ inputs.postman_api_key }}" \ "https://api.postman.com/collections/${{ inputs.postman_collection_id }}" \ | jq ''.collection'' > ${{ inputs.output_file }} echo "saved_file=${{ inputs.output_file }}" >> $GITHUB_OUTPUT - name : Validate JSON shell : bash run : | jq empty ${{ inputs.output_file }} || (echo "Invalid JSON file" && exit 1) - name : Commit and push changes shell :'
+      x-operation-id-source: normalized
+      x-operation-id-original: get_collections
+components:
+  schemas:
+    GetCollectionsResponse:
+      type: object
+      properties:
+        collections:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              owner:
+                type: string
+              createdAt:
+                type: string
+                format: date-time
+              updatedAt:
+                type: string
+                format: date-time
+              uid:
+                type: string
+              isPublic:
+                type: boolean
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key

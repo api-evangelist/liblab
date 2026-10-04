@@ -1,0 +1,79 @@
+openapi: 3.2.0
+info:
+  title: Liblab OpenAPI API
+  version: '2026-10-04'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-04: 14 operation(s) read from 21 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Liblab has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 16
+    documentation: -2
+    pages-with-code: 21
+    pages-read: 21
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-04'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://liblab.com/docs/tutorials/ci-cd/postman-api/index
+  - https://liblab.com/docs/tutorials/documentation/docusaurus-enhanced-api/index
+  - https://liblab.com/docs/howto/fastapi
+  - https://liblab.com/docs/howto/flask/index
+  - https://liblab.com/docs/howto/remix/index
+  - https://liblab.com/docs/howto/aspnet/index
+  - https://liblab.com/docs/howto/django/index
+  - https://liblab.com/docs/howto/go-goa/index
+  - https://liblab.com/docs/howto/nestjs/index
+  - https://liblab.com/docs/howto/nextjs/index
+  - https://liblab.com/docs/howto/fastapi/index
+  - https://liblab.com/docs/howto/fastify/index
+  - https://liblab.com/docs/howto/go-huma/index
+  - https://liblab.com/docs/howto/laravel/index
+  - https://liblab.com/docs/howto/spring-boot/index
+  - https://liblab.com/docs/tutorials/generate-sdks/sdk-for-fastapi
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-github-actions
+  - https://liblab.com/docs/tutorials/generate-sdks/sdk-for-fastapi/index
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-github-actions/index
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-gitlab-pipelines/index
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-jenkins-pipelines/index
+servers:
+- url: https://raw.githubusercontent.com
+security:
+- apiKey: []
+tags:
+- name: Open API
+paths:
+  /openapi.json:
+    get:
+      operationId: get_openapi_json
+      tags:
+      - Open API
+      summary: GET /openapi.json
+      x-source: https://liblab.com/docs/howto/fastapi
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -o openapi.json http://localhost:8000/openapi.json \n Beyond the Basics While generating an initial OpenAPI spec with FastAPI is simple and straightforward there are many more configuration options available to you. Here are a few resources you may be interested in: \n For details on configuring and using FastAPI , check the official documentation . \n To learn how to add metadata and configure "
+  /openapi/v1.json:
+    get:
+      operationId: get_openapi_v1_json
+      tags:
+      - Open API
+      summary: GET /openapi/v1.json
+      x-source: https://liblab.com/docs/howto/aspnet/index
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -o openapi.json http://localhost:5127/openapi/v1.json \n Configuring liblab ​ \n Now you'll need to make some minor updates to your liblab.config.json file in your ASP-NET -sdk folder: \n Point the specFilePath parameter to the location of your OpenAPI spec file (ex. ./openapi.json ). \n Specify the baseUrl of your API. This is the URL that the SDK will use to make requests to your API. \n The top"
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key

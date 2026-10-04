@@ -1,0 +1,65 @@
+openapi: 3.2.0
+info:
+  title: Liblab Github Linguist API
+  version: '2026-10-04'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-04: 14 operation(s) read from 21 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Liblab has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 16
+    documentation: -2
+    pages-with-code: 21
+    pages-read: 21
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-04'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://liblab.com/docs/tutorials/ci-cd/postman-api/index
+  - https://liblab.com/docs/tutorials/documentation/docusaurus-enhanced-api/index
+  - https://liblab.com/docs/howto/fastapi
+  - https://liblab.com/docs/howto/flask/index
+  - https://liblab.com/docs/howto/remix/index
+  - https://liblab.com/docs/howto/aspnet/index
+  - https://liblab.com/docs/howto/django/index
+  - https://liblab.com/docs/howto/go-goa/index
+  - https://liblab.com/docs/howto/nestjs/index
+  - https://liblab.com/docs/howto/nextjs/index
+  - https://liblab.com/docs/howto/fastapi/index
+  - https://liblab.com/docs/howto/fastify/index
+  - https://liblab.com/docs/howto/go-huma/index
+  - https://liblab.com/docs/howto/laravel/index
+  - https://liblab.com/docs/howto/spring-boot/index
+  - https://liblab.com/docs/tutorials/generate-sdks/sdk-for-fastapi
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-github-actions
+  - https://liblab.com/docs/tutorials/generate-sdks/sdk-for-fastapi/index
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-github-actions/index
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-gitlab-pipelines/index
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-jenkins-pipelines/index
+servers:
+- url: https://raw.githubusercontent.com
+security:
+- apiKey: []
+tags:
+- name: Github Linguist
+paths:
+  /github-linguist/linguist/blob/master/lib/linguist/popular.yml:
+    get:
+      operationId: get_github_linguist_linguist_blob_master_lib_linguist_popular_yml
+      tags:
+      - Github Linguist
+      summary: GET /github-linguist/linguist/blob/master/lib/linguist/popular.yml
+      x-source: https://liblab.com/docs/tutorials/documentation/docusaurus-enhanced-api/index
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl" , codeSampleLanguage : "bash" , logoClass : "bash" , options : { longFormat : false , followRedirect : true , trimRequestBody : true , } , variant : "cURL" , variants : [ "curl" ] , enabled : true , } , { highlight : "ruby" , language : "ruby" , codeSampleLanguage : "Ruby" , logoClass : "ruby" , options : { followRedirect : true , trimRequestBody : true , } , variant : "Net::HTTP" , variants'
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
