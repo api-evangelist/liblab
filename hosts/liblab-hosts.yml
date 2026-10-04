@@ -1,0 +1,149 @@
+generated: '2026-10-04'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 9
+  own: 5
+  other_domain: 0
+  platform: 4
+  roles:
+  - api
+  - other
+  - portal
+  - source
+  - website
+hosts:
+- host: api.liblab.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: liblab.com
+  role: api
+  relation: own
+- host: app.liblab.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Portal
+  - Signup
+  serves: []
+  registrable_domain: liblab.com
+  role: other
+  relation: own
+- host: developers.liblab.com
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  title: 'liblab Docs: API & SDK Documentation for Developers'
+  status: 200
+  registrable_domain: liblab.com
+  role: portal
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  - GitHubAction
+  - HomebrewTap
+  - SampleOpenAPI
+  - AgentExample
+  - RAGTemplate
+  - AgentRepo
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: hub.liblab.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Hub
+  serves:
+  - docs
+  registrable_domain: liblab.com
+  role: other
+  relation: own
+- host: liblab.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Security
+  - SDKs
+  - ChangeLog
+  - APIReference
+  - Website
+  - Documentation
+  - GettingStarted
+  - Blog
+  - Pricing
+  - About
+  - Contact
+  - Developer
+  - CLI
+  - PrivacyPolicy
+  - TermsOfService
+  - MCPServer
+  - Acquisition
+  - LlmsText
+  serves:
+  - docs
+  - cdn
+  - documentation
+  vendor: cloudflare
+  registrable_domain: liblab.com
+  role: website
+  relation: own
+- host: raw.githubusercontent.com
+  found_by:
+  - apis[]
+  - spec-found
+  - vendor-detect
+  types: []
+  serves:
+  - api
+  - spec
+  - hosting
+  vendor: github-pages
+  registrable_domain: githubusercontent.com
+  role: other
+  relation: platform
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: x.com
+  found_by:
+  - pointer
+  types:
+  - Twitter
+  serves: []
+  registrable_domain: x.com
+  role: other
+  relation: platform

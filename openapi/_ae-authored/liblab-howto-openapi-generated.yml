@@ -1,0 +1,191 @@
+openapi: 3.1.0
+info:
+  title: Liblab howto API
+  version: '2026-10-04'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-04: 8 operation(s) read from 8 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Liblab has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 16
+    documentation: -2
+    pages-with-code: 21
+    pages-read: 21
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-04'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://liblab.com/docs/howto/aspnet/index
+  - https://liblab.com/docs/howto/django/index
+  - https://liblab.com/docs/howto/fastapi
+  - https://liblab.com/docs/howto/go-goa/index
+  - https://liblab.com/docs/howto/laravel/index
+  - https://liblab.com/docs/howto/nestjs/index
+  - https://liblab.com/docs/howto/remix/index
+  - https://liblab.com/docs/howto/spring-boot/index
+  x-docs-section: howto
+servers:
+- url: https://raw.githubusercontent.com
+paths:
+  /:
+    get:
+      operationId: get
+      tags:
+      - Api
+      summary: GET /
+      x-source: https://liblab.com/docs/howto/go-goa/index
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: ruby
+        snippet: URI ( "http://localhost:8080"
+  /api-json:
+    get:
+      operationId: get_api_json
+      tags:
+      - Api Json
+      summary: GET /api-json
+      x-source: https://liblab.com/docs/howto/nestjs/index
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -o openapi.json http://localhost:3000/api-json \n Configuring liblab ​ \n Now you'll need to make some minor updates to\
+          \ your liblab.config.json file in your NestJS -sdk folder: \n Point the specFilePath parameter to the location of your OpenAPI spec\
+          \ file (ex. ./openapi.json ). \n Specify the baseUrl of your API. This is the URL that the SDK will use to make requests to your API.\
+          \ \n The top of the "
+  /api/schema/:
+    get:
+      operationId: get_api_schema
+      tags:
+      - Api
+      summary: GET /api/schema/
+      x-source: https://liblab.com/docs/howto/django/index
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /api/{apiid}:
+    get:
+      operationId: get_api_apiid
+      tags:
+      - Api
+      summary: GET /api/openapi
+      x-source: https://liblab.com/docs/howto/remix/index
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: format
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -o openapi.json http://localhost:3000/api/openapi \n Configuring liblab ​ \n Now you'll need to make some minor updates\
+          \ to your liblab.config.json file in your Remix -sdk folder: \n Point the specFilePath parameter to the location of your OpenAPI spec\
+          \ file (ex. ./openapi.json ). \n Specify the baseUrl of your API. This is the URL that the SDK will use to make requests to your API.\
+          \ \n The top of th"
+        collapsed_from: 3 example path(s) differing only at apiId
+  /docs/{docid}:
+    get:
+      operationId: get_docs_docid
+      tags:
+      - Docs
+      summary: GET /docs/openapi.yaml
+      x-source: https://liblab.com/docs/howto/laravel/index
+      parameters:
+      - name: docid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -o openapi.yaml http://127.0.0.1:8000/docs/openapi.yaml \n Configuring liblab ​ \n Now you'll need to make some minor updates\
+          \ to your liblab.config.json file in your Laravel -sdk folder: \n Point the specFilePath parameter to the location of your OpenAPI spec\
+          \ file (ex. ./openapi.json ). \n Specify the baseUrl of your API. This is the URL that the SDK will use to make requests to your API.\
+          \ \n The t"
+        collapsed_from: 2 example path(s) differing only at docId
+  /openapi.json:
+    get:
+      operationId: get_openapi_json
+      tags:
+      - Openapi
+      summary: GET /openapi.json
+      x-source: https://liblab.com/docs/howto/fastapi
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -o openapi.json http://localhost:8000/openapi.json \n Beyond the Basics While generating an initial OpenAPI spec with FastAPI\
+          \ is simple and straightforward there are many more configuration options available to you. Here are a few resources you may be interested\
+          \ in: \n For details on configuring and using FastAPI , check the official documentation . \n To learn how to add metadata and configure "
+  /openapi/v1.json:
+    get:
+      operationId: get_openapi_v1_json
+      tags:
+      - Openapi
+      summary: GET /openapi/v1.json
+      x-source: https://liblab.com/docs/howto/aspnet/index
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -o openapi.json http://localhost:5127/openapi/v1.json \n Configuring liblab ​ \n Now you'll need to make some minor updates\
+          \ to your liblab.config.json file in your ASP-NET -sdk folder: \n Point the specFilePath parameter to the location of your OpenAPI spec\
+          \ file (ex. ./openapi.json ). \n Specify the baseUrl of your API. This is the URL that the SDK will use to make requests to your API.\
+          \ \n The top"
+  /v3/api-docs:
+    get:
+      operationId: get_v3_api_docs
+      tags:
+      - Api Docs
+      summary: GET /v3/api-docs
+      x-source: https://liblab.com/docs/howto/spring-boot/index
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -o openapi.json http://localhost:8080/v3/api-docs \n Configuring liblab ​ \n Now you'll need to make some minor updates\
+          \ to your liblab.config.json file in your Spring-Boot -sdk folder: \n Point the specFilePath parameter to the location of your OpenAPI\
+          \ spec file (ex. ./openapi.json ). \n Specify the baseUrl of your API. This is the URL that the SDK will use to make requests to your\
+          \ API. \n The top"
+security:
+- apiKey: []
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
+tags:
+- name: Api
+- name: Api Docs
+- name: Api Json
+- name: Docs
+- name: Openapi

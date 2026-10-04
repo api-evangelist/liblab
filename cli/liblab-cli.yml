@@ -1,0 +1,32 @@
+generated: '2026-10-04'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://liblab.com/docs/cli/cli-installation
+sources:
+- https://liblab.com/docs/cli/cli-installation
+- https://liblab.com/docs/cli/cli-overview-auth
+- https://liblab.com/docs/cli/cli-overview-build
+- https://liblab.com/docs/cli/cli-overview-configuration
+install:
+- method: npm
+  command: npm install -g liblab
+- method: pnpm
+  command: pnpm add -g liblab
+commands:
+- group: auth
+  commands:
+  - login
+  - logout
+  - change-password
+  - token
+- group: build
+  commands:
+  - init
+  - hooks
+  - build
+- group: config
+  commands:
+  - config
+binary: liblab
+docs: https://liblab.com/docs/cli/cli-installation
+note: 1 extracted row(s) were dropped because their quote was not on the page.

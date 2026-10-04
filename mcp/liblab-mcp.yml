@@ -1,0 +1,79 @@
+generated: '2026-10-04'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/liblab-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on api.liblab.com, liblab.com, hub.liblab.com, app.liblab.com; verdict
+  absent. Candidate tools below are derived from the 13 operation(s) in the provider's own OpenAPI (13 listed); they describe what a server WOULD
+  expose, not one that exists.
+tools:
+- name: get
+  operationId: get
+  method: GET
+  path: /
+  description: GET /
+- name: get_api_json
+  operationId: get_api_json
+  method: GET
+  path: /api-json
+  description: GET /api-json
+- name: get_api_schema
+  operationId: get_api_schema
+  method: GET
+  path: /api/schema/
+  description: GET /api/schema/
+- name: get_api_apiid
+  operationId: get_api_apiid
+  method: GET
+  path: /api/{apiid}
+  description: GET /api/openapi
+- name: get_collections
+  operationId: get_collections
+  method: GET
+  path: /collections
+  description: GET /collections
+- name: get_docs_docid
+  operationId: get_docs_docid
+  method: GET
+  path: /docs/{docid}
+  description: GET /docs/openapi.yaml
+- name: get_github_linguist_linguist_blob_master_lib_linguist_popula
+  operationId: get_github_linguist_linguist_blob_master_lib_linguist_popular_yml
+  method: GET
+  path: /github-linguist/linguist/blob/master/lib/linguist/popular.yml
+  description: GET /github-linguist/linguist/blob/master/lib/linguist/popular.yml
+- name: get_liblaber_control_repo_template_main_jenkinsfile
+  operationId: get_liblaber_control_repo_template_main_Jenkinsfile
+  method: GET
+  path: /liblaber/control-repo-template/main/Jenkinsfile
+  description: GET /liblaber/control-repo-template/main/Jenkinsfile
+- name: get_liblaber_control_repo_template_refs_heads_main_github_wo
+  operationId: get_liblaber_control_repo_template_refs_heads_main_github_workflows_liblab_gener
+  method: GET
+  path: /liblaber/control-repo-template/refs/heads/main/.github/workflows/{liblab-generate-sdks.yaml,liblab-sdk-updates.yaml}
+  description: GET /liblaber/control-repo-template/refs/heads/main/.github/workflows/{liblab-generate-sdks.yaml,liblab-sdk-updates.yaml}
+- name: get_liblaber_control_repo_template_refs_heads_main_gitlab_ci
+  operationId: get_liblaber_control_repo_template_refs_heads_main_gitlab_ci_yml
+  method: GET
+  path: /liblaber/control-repo-template/refs/heads/main/.gitlab-ci.yml
+  description: GET /liblaber/control-repo-template/refs/heads/main/.gitlab-ci.yml
+- name: get_openapi_json
+  operationId: get_openapi_json
+  method: GET
+  path: /openapi.json
+  description: GET /openapi.json
+- name: get_openapi_v1_json
+  operationId: get_openapi_v1_json
+  method: GET
+  path: /openapi/v1.json
+  description: GET /openapi/v1.json
+- name: get_v3_api_docs
+  operationId: get_v3_api_docs
+  method: GET
+  path: /v3/api-docs
+  description: GET /v3/api-docs

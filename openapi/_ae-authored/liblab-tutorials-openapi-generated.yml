@@ -1,0 +1,183 @@
+openapi: 3.1.0
+info:
+  title: Liblab tutorials API
+  version: '2026-10-04'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-04: 6 operation(s) read from 5 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Liblab has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 16
+    documentation: -2
+    pages-with-code: 21
+    pages-read: 21
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-04'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-github-actions
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-gitlab-pipelines/index
+  - https://liblab.com/docs/tutorials/ci-cd/integrate-with-jenkins-pipelines/index
+  - https://liblab.com/docs/tutorials/ci-cd/postman-api/index
+  - https://liblab.com/docs/tutorials/documentation/docusaurus-enhanced-api/index
+  x-docs-section: tutorials
+servers:
+- url: https://raw.githubusercontent.com
+paths:
+  /collections:
+    get:
+      operationId: get_collections
+      tags:
+      - Collections
+      summary: GET /collections
+      x-source: https://liblab.com/docs/tutorials/ci-cd/postman-api/index
+      parameters:
+      - name: apikey
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCollectionsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET \"https://api.getpostman.com/collections?apikey=<your_api_key>\" \n You will receive an array with all collections\
+          \ linked to your account. Identify the collection you want to use and copy its id . The following snippet presents an example of the\
+          \ response you can expect. \n { \"collections\" : [ { \"id\" : \"30107d04-5793-4bdd-9449-601be46cf6b2\" , \"name\" : \"Collection Name\"\
+          \ , \"owner\" : \"28471659"
+  /collections/${{:
+    get:
+      operationId: get_collections
+      tags:
+      - Collections
+      summary: GET /collections/${{
+      x-source: https://liblab.com/docs/tutorials/ci-cd/postman-api/index
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetCollectionsResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -s -H "X-API-Key: ${{ inputs.postman_api_key }}" \ "https://api.postman.com/collections/${{ inputs.postman_collection_id
+          }}" \ | jq ''.collection'' > ${{ inputs.output_file }} echo "saved_file=${{ inputs.output_file }}" >> $GITHUB_OUTPUT - name : Validate
+          JSON shell : bash run : | jq empty ${{ inputs.output_file }} || (echo "Invalid JSON file" && exit 1) - name : Commit and push changes
+          shell :'
+  /github-linguist/linguist/blob/master/lib/linguist/popular.yml:
+    get:
+      operationId: get_github_linguist_linguist_blob_master_lib_linguist_popular_yml
+      tags:
+      - Github Linguist
+      summary: GET /github-linguist/linguist/blob/master/lib/linguist/popular.yml
+      x-source: https://liblab.com/docs/tutorials/documentation/docusaurus-enhanced-api/index
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl" , codeSampleLanguage : "bash" , logoClass : "bash" , options : { longFormat : false , followRedirect : true , trimRequestBody
+          : true , } , variant : "cURL" , variants : [ "curl" ] , enabled : true , } , { highlight : "ruby" , language : "ruby" , codeSampleLanguage
+          : "Ruby" , logoClass : "ruby" , options : { followRedirect : true , trimRequestBody : true , } , variant : "Net::HTTP" , variants'
+  /liblaber/control-repo-template/main/Jenkinsfile:
+    get:
+      operationId: get_liblaber_control_repo_template_main_Jenkinsfile
+      tags:
+      - Liblaber
+      summary: GET /liblaber/control-repo-template/main/Jenkinsfile
+      x-source: https://liblab.com/docs/tutorials/ci-cd/integrate-with-jenkins-pipelines/index
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --remote-name \"https://raw.githubusercontent.com/liblaber/control-repo-template/main/Jenkinsfile\" \n This command downloads\
+          \ the official liblab Jenkins file ( Jenkinsfile ) and places it in the root of your Control Repo. The Jenkinsfile is a pipeline configuration\
+          \ file for automating SDK generation and pull request creation when specific files or directories, such as liblab.config.json , spec/"
+  /liblaber/control-repo-template/refs/heads/main/.github/workflows/{liblab-generate-sdks.yaml,liblab-sdk-updates.yaml}:
+    get:
+      operationId: get_liblaber_control_repo_template_refs_heads_main_github_workflows_liblab_gener
+      tags:
+      - Liblaber
+      summary: GET /liblaber/control-repo-template/refs/heads/main/.github/workflows/{liblab-generate-sdks.yaml,liblab-sdk-updates.yaml}
+      x-source: https://liblab.com/docs/tutorials/ci-cd/integrate-with-github-actions
+      parameters:
+      - name: liblab-generate-sdks.yaml,liblab-sdk-updates.yaml
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --create-dirs --remote-name-all --output-dir .github/workflows \"https://raw.githubusercontent.com/liblaber/control-repo-template/refs/heads/main/.github/workflows/{liblab-generate-sdks.yaml,liblab-sdk-updates.yaml}\"\
+          \ \n This command downloads the official liblab GitHub Actions files ( liblab-generate-sdks.yaml and liblab-sdk-updates.yaml ) and places\
+          \ them in the .github/workflows directory of y"
+  /liblaber/control-repo-template/refs/heads/main/.gitlab-ci.yml:
+    get:
+      operationId: get_liblaber_control_repo_template_refs_heads_main_gitlab_ci_yml
+      tags:
+      - Liblaber
+      summary: GET /liblaber/control-repo-template/refs/heads/main/.gitlab-ci.yml
+      x-source: https://liblab.com/docs/tutorials/ci-cd/integrate-with-gitlab-pipelines/index
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --create-dirs --output .gitlab-ci.yml https://raw.githubusercontent.com/liblaber/control-repo-template/refs/heads/main/.gitlab-ci.yml\
+          \ \n This command downloads the official liblab Bitbucket pipeline file ( .gitlab-ci.yml ) and places them in the root of your Control\
+          \ Repo. \n .gitlab-ci.yml This file automates the SDK generation process and creates pull requests for changes in specific files, su"
+security:
+- apiKey: []
+components:
+  schemas:
+    GetCollectionsResponse:
+      type: object
+      properties:
+        collections:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              owner:
+                type: string
+              createdAt:
+                type: string
+                format: date-time
+              updatedAt:
+                type: string
+                format: date-time
+              uid:
+                type: string
+              isPublic:
+                type: boolean
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
+tags:
+- name: Collections
+- name: Github Linguist
+- name: Liblaber

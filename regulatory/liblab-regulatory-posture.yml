@@ -1,0 +1,25 @@
+generated: "2026-10-04"
+method: derived
+source: "privacy-policy"
+signals:
+  data_retention:
+    evidence:
+      - source: "https://liblab.com/privacy-policy"
+        http_status: 200
+        fetched: "/tmp/privacy.html"
+        quote: "We retain Service Data for different periods of time depending on the type of data, how we use it, and how you configure your settings. ... We retain most types of Service Data for a set period of up to 180 days (the exact number depends on the specific type of data). However, some Service Data may be kept for longer periods where there is a business need."
+        note: "Describes retention periods up to 180 days and possible longer for security, legal, tax purposes."
+  data_subject_request:
+    evidence:
+      - source: "https://liblab.com/privacy-policy"
+        http_status: 200
+        fetched: "/tmp/privacy.html"
+        quote: "If you’re otherwise unable to access your Service Data, you can always request it here."
+        note: "Provides a way for users to request access to their data."
+  subprocessors:
+    evidence:
+      - source: "https://liblab.com/privacy-policy"
+        http_status: 200
+        fetched: "/tmp/privacy.html"
+        quote: "information to subprocessors or its subsidiaries or ... With regard to the location of subprocessors, please see here."
+        note: "Mentions use of subprocessors and links to external description."

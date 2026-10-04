@@ -1,0 +1,36 @@
+generated: '2026-10-04'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://liblab.com/docs/concepts/authentication
+sources:
+- https://liblab.com/docs/concepts/authentication
+- https://liblab.com/docs/cli/cli-overview-auth
+- https://liblab.com/docs/concepts/authentication
+- https://liblab.com/docs/cli/cli-overview-auth
+description: Authentication methods supported by liblab SDKs and CLI.
+schemes:
+- type: apiKey
+  name: apikey
+  evidence: By default the X-API-KEY header is used to send the API key
+  location: header
+  header: X-API-KEY
+  how_to_obtain: Set the API key in the SDK config or via setApiKey method; can be customized in the config file.
+- type: http-basic
+  name: basic
+  evidence: Basic authentication with a user name and password
+  how_to_obtain: Provide username and password when configuring the SDK.
+- type: http-bearer
+  name: bearer
+  evidence: Bearer token authentication
+  location: header
+  header: Authorization
+  how_to_obtain: Supply the bearer token in the SDK config or via environment variable.
+- type: other
+  name: custom
+  evidence: Custom access token authentication
+  how_to_obtain: Provide the custom token as defined by the API.
+- type: oauth2
+  name: oauth
+  evidence: OAuth authentication
+  how_to_obtain: Obtain OAuth credentials as described by the API; details not provided on the page.
+docs: https://liblab.com/docs/concepts/authentication
