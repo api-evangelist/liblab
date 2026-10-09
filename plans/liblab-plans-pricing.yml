@@ -178,3 +178,55 @@ plans:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  - metered
+  units:
+  - request
+  - seat
+  plans:
+  - name: SDK Generator - Starter / Trial
+    access: freemium
+    model: free
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+    - other
+  - name: SDK Generator - Business
+    access: paid
+    model: free
+    model_how: derived
+    units:
+    - other
+    - seat
+    periods:
+    - month
+  - name: SDK Generator - Enterprise
+    access: enterprise
+    model: free
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: MCP Generator - Free Tier
+    access: freemium
+    model: free
+    model_how: derived
+    units:
+    - request
+    periods:
+    - month
+  - name: MCP Generator - Pay-As-You-Go
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - request
+    periods:
+    - month
