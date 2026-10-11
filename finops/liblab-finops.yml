@@ -6,6 +6,7 @@ specification: FinOps Framework
 specificationVersion: '1.0'
 provider: Liblab
 providerId: liblab
+name: Liblab API FinOps
 publisherName: Liblab (a Postman company)
 serviceCategory: Developer Tools / SDK Generation
 created: '2026-05-04'
