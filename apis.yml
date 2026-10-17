@@ -371,8 +371,6 @@ apis:
   humanURL: https://liblab.com/
   baseURL: https://raw.githubusercontent.com
   tags:
-  - OpenAPI
-  tags_raw:
   - Open API
   properties:
   - type: OpenAPI

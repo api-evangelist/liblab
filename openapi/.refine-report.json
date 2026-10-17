@@ -14,7 +14,9 @@
     "liblab-openapi-api-openapi.yml",
     "liblab-schema-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
   "notes": [
@@ -26,10 +28,20 @@
     "liblab-openapi-generated.yml: tagged paths GET /api/{apiid} -> Liblab API",
     "liblab-openapi-generated.yml: declared missing tag: Liblab API",
     "liblab-openapi-generated.yml: declared missing tag: Schema",
-    "apis.yml register: written (+9 apis, 13 total)"
+    "superseded outputs removed: liblab-open-api-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 13 total)"
   ],
   "skipped": [
     "_ae-authored/liblab-tutorials-openapi-generated.yml: archived document superseded by a larger archived document",
-    "_ae-authored/liblab-howto-openapi-generated.yml: archived document superseded by a larger archived document"
+    "_ae-authored/liblab-howto-openapi-generated.yml: archived document superseded by a larger archived document",
+    "liblab-api-docs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "liblab-api-json-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "liblab-collections-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "liblab-docs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "liblab-github-linguist-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "liblab-liblab-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "liblab-liblaber-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "liblab-open-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "liblab-schema-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }
