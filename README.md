@@ -1,4 +1,4 @@
-# Liblab (liblab)
+# Liblab
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,113 +64,151 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-liblab generates and publishes type-safe, idiomatic SDKs in TypeScript, Python, Java, .NET, Go, PHP, and Terraform from OpenAPI/Swagger/Postman specs, plus MCP servers that expose those APIs to AI agents. The platform ships a CLI, hosted portal, and CI/CD GitHub Action that publish SDKs to customer repos via pull requests. liblab joined Postman in November 2025 to complete the API lifecycle.
+liblab generates and publishes type-safe, idiomatic SDKs in TypeScript, Python, Java, .NET, Go, PHP, and Terraform from OpenAPI/Swagger/Postman specs, plus MCP servers that expose those APIs to AI agents. The platform ships a CLI, hosted portal, and CI/CD GitHub Action that publish SDKs to customer repos via pull requests. liblab joined Postman in November 2025 to complete the API lifecycle. It offers a unified developer experience with extensive documentation, pricing transparency, and community support.
 
-**APIs.yml:** [apis.yml](https://raw.githubusercontent.com/api-evangelist/liblab/refs/heads/main/apis.yml)
+**Areas:** SDK · SDK Generation · Code Generation · OpenAPI · Developer Tools · MCP · AI Agents · Postman · Terraform · Developer Experience
 
-## Scope
+## Liblab on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Liblab is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/liblab/](https://apis.io/providers/liblab/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (13)
 
-SDKs, SDK Generation, Code Generation, OpenAPI, Developer Tools, MCP, AI Agents, Postman, Terraform, Developer Experience
+- [Liblab SDK Generator](https://apis.io/apis/liblab/liblab/) — Cloud-based generator that produces customizable, type-safe SDKs in seven target stacks (TypeScript, Python, Java, .NET, Go, PHP, Terraform) from OpenAPI…
+- [Liblab MCP Generator](https://apis.io/apis/liblab/mcp-generator/) — Generates a complete Model Context Protocol (MCP) server from an OpenAPI, Swagger, or Postman spec so AI chat clients (Claude, Cursor, OpenAI) can call the…
+- [Liblab Hub](https://apis.io/apis/liblab/hub/) — Public catalog of pre-generated SDKs (Python, TypeScript, C#, PHP) for popular third-party APIs (Postman, RingCentral, NYT, UPS, NHL, Pinnacle, OpenHue,…
+- [Liblab Terraform Provider Generator](https://apis.io/apis/liblab/terraform-provider/) — Generates a Terraform provider from an OpenAPI specification, enabling Infrastructure-as-Code workflows against any documented API.
+- [Liblab Api Docs API](https://apis.io/apis/liblab/liblab-api-docs-api/) — The Api Docs API from Liblab — 1 operation(s) for api docs.
+- [Liblab Api Json API](https://apis.io/apis/liblab/liblab-api-json-api/) — The Api Json API from Liblab — 1 operation(s) for api json.
+- [Liblab Collections API](https://apis.io/apis/liblab/liblab-collections-api/) — The Collections API from Liblab — 2 operation(s) for collections.
+- [Liblab Docs API](https://apis.io/apis/liblab/liblab-docs-api/) — The Docs API from Liblab — 1 operation(s) for docs.
+- [Liblab Github Linguist API](https://apis.io/apis/liblab/liblab-github-linguist-api/) — The Github Linguist API from Liblab — 1 operation(s) for github linguist.
+- [Liblab Liblab API](https://apis.io/apis/liblab/liblab-liblab-api-api/) — The Liblab API API from Liblab — 2 operation(s) for liblab api.
+- [Liblab Liblaber API](https://apis.io/apis/liblab/liblab-liblaber-api/) — The Liblaber API from Liblab — 3 operation(s) for liblaber.
+- [Liblab Schema API](https://apis.io/apis/liblab/liblab-schema-api/) — The Schema API from Liblab — 1 operation(s) for schema.
+- [Liblab Open API](https://apis.io/apis/liblab/liblab-open-api-api/) — The Open API API from Liblab — 2 operation(s) for open api.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-03
-- **Modified:** 2026-05-22
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### MCP servers (2)
 
-### Liblab SDK Generator
-Cloud-based generator that produces customizable, type-safe SDKs in seven target stacks (TypeScript, Python, Java, .NET, Go, PHP, Terraform) from OpenAPI 2.0/3.0/3.1 or Postman Collections. CLI and CI/CD workflows publish SDKs to customer GitHub repos as pull requests.
+Model Context Protocol servers that expose the API to agents.
 
-**Human URL:** https://liblab.com/
+- [liblab-mcp.yml](https://apis.io/servers/liblab/liblab-mcp-yml/)
+- [MCP Server](https://apis.io/servers/liblab/mcp-server/)
 
-**Tags:** SDK Generation, Code Generation, OpenAPI, CLI, CI/CD
+#### JSON Schema (1)
 
-**Properties:**
+The data models the API reads and writes.
 
-- [Documentation](https://liblab.com/docs)
-- [GettingStarted](https://liblab.com/docs/get-started/quickstart-generate-sdk)
-- [Portal](https://app.liblab.com/)
-- [Hub](https://hub.liblab.com/)
-- [CLI](https://liblab.com/docs/cli/cli-overview)
-- [GitHubAction](https://github.com/liblaber/liblab-sdk-updates)
-- [SampleAPI](https://github.com/liblaber/simple-petstore-openapi)
+- [GetCollectionsResponse](https://apis.io/schemas/liblab/liblab-get-collections-response/)
 
-### Liblab MCP Generator
-Generates a complete Model Context Protocol (MCP) server from an OpenAPI, Swagger, or Postman spec so AI chat clients (Claude, Cursor, OpenAI) can call the underlying API in natural language. Launched June 2025; first-year free tier covers 100 MCP calls per month, then $5 per 100 calls.
+#### JSON-LD (1)
 
-**Human URL:** https://liblab.com/blog/mcp-generator
+Linked-data contexts for the provider's vocabulary.
 
-**Tags:** MCP, AI Agents, Model Context Protocol, OpenAPI
+- [Liblab Context](https://apis.io/jsonld/liblab/liblab-context/)
 
-**Properties:**
+#### Governance rules (1)
 
-- [Announcement](https://liblab.com/blog/2025-06-24-introducing-liblab-mcp-generator)
-- [BlogPost](https://liblab.com/blog/mcp-generator)
-- [Pricing](https://liblab.com/pricing)
+Spectral rulesets for the provider's contracts.
 
-### Liblab Hub
-Public catalog of pre-generated SDKs (Python, TypeScript, C#, PHP) for popular third-party APIs (Postman, RingCentral, NYT, UPS, NHL, Pinnacle, OpenHue, Skyscanner, Voyado, Booking, etc.) used to demonstrate generator output quality. Free to use.
+- [Liblab API Rules](https://apis.io/rules/liblab/liblab-rules/)
 
-**Human URL:** https://hub.liblab.com/
+#### Security (2)
 
-**Tags:** SDKs, Hub, Catalog
+Authentication, trust centre, and vulnerability disclosure.
 
-### Liblab Terraform Provider Generator
-Generates a Terraform provider from an OpenAPI specification, enabling Infrastructure-as-Code workflows against any documented API.
+- [Liblab Authentication](https://apis.io/security/liblab/liblab-authentication/)
+- [Liblab Domain Security](https://apis.io/security/liblab/liblab-domain-security/)
 
-**Human URL:** https://liblab.com/docs
+#### Plans and pricing (1)
 
-**Tags:** Terraform, Infrastructure, Code Generation
+Published plans, tiers and prices.
 
-## Common Properties
+- [Liblab Plans Pricing](https://apis.io/plans/liblab/liblab-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Liblab Rate Limits](https://apis.io/rate-limits/liblab/liblab-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Liblab Finops](https://apis.io/finops/liblab/liblab-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://liblab.com/)
 - [Documentation](https://liblab.com/docs)
-- [GettingStarted](https://liblab.com/docs/get-started/quickstart-generate-sdk)
-- [Blog](https://liblab.com/blog)
+- [Getting started](https://liblab.com/docs/get-started/quickstart-generate-sdk)
+- [API reference](https://liblab.com/docs/mcp/howto-generate-mcp-with-liblab)
 - [Pricing](https://liblab.com/pricing)
-- [About](https://liblab.com/about)
-- [Contact](https://liblab.com/contact)
-- [Portal](https://app.liblab.com/)
-- [SignUp](https://app.liblab.com/join)
-- [Developer](https://liblab.com/developer)
-- [CLI](https://liblab.com/docs/cli/cli-overview)
-- [PrivacyPolicy](https://liblab.com/privacy-policy)
-- [TermsOfService](https://liblab.com/terms)
-- [Hub](https://hub.liblab.com/)
-- [GitHubOrganization](https://github.com/liblaber)
-- [Twitter](https://x.com/LibLaber)
-- [LinkedIn](https://www.linkedin.com/company/liblaber)
-- [MCPServer - MCP Generator](https://liblab.com/blog/mcp-generator)
-- [GitHubAction - liblab-sdk-updates](https://github.com/liblaber/liblab-sdk-updates)
-- [HomebrewTap](https://github.com/liblaber/homebrew-liblab)
-- [SampleOpenAPI](https://github.com/liblaber/simple-petstore-openapi)
-- [AgentExample - ai-github-agent-example](https://github.com/liblaber/ai-github-agent-example)
-- [RAGTemplate - build-a-rag-ai-app-template](https://github.com/liblaber/build-a-rag-ai-app-template)
-- [AgentRepo - ai](https://github.com/liblaber/ai)
-- [Plans](https://raw.githubusercontent.com/api-evangelist/liblab/main/plans/liblab-plans-pricing.yml)
-- [RateLimits](https://raw.githubusercontent.com/api-evangelist/liblab/main/rate-limits/liblab-rate-limits.yml)
-- [FinOps](https://raw.githubusercontent.com/api-evangelist/liblab/main/finops/liblab-finops.yml)
-- [Acquisition - liblab joins Postman](https://liblab.com/blog/liblab-joins-postman-to-complete-the-api-lifecycle)
+- [Changelog](https://liblab.com/blog/tags/release-notes)
+- [Blog](https://liblab.com/blog)
+- [Security](https://liblab.com/blog/tags/security)
+- [Terms of service](https://liblab.com/terms)
+- [Privacy policy](https://liblab.com/privacy-policy)
+- [GitHub](https://github.com/liblaber)
 
-## Artifacts
+## API Evangelist rating
 
-- **Plans** - [plans/liblab-plans-pricing.yml](plans/liblab-plans-pricing.yml)
-- **Rate Limits** - [rate-limits/liblab-rate-limits.yml](rate-limits/liblab-rate-limits.yml)
-- **FinOps** - [finops/liblab-finops.yml](finops/liblab-finops.yml)
-- **Blog mirror** - [blogs/](blogs/)
+**Kin Score 46.1** — developing · rubric 0.25.0 · scored 2026-10-23
 
-> No `openapi/`, `capabilities/`, `json-schema/`, `json-structure/`, `json-ld/`, `vocabulary/`, `rules/`, or `examples/` directories are published in this repo. liblab is an SDK + MCP generation platform, not a transactional API provider, so there is no public OpenAPI surface of its own to anchor those artifacts. The platform's outputs (SDKs, MCP servers, Terraform providers) are generated downstream from each customer's own spec.
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 19.1 |
+| Contract governance | 35.6 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 66.7 |
+| Access clarity | 52.6 |
 
-## Maintainers
+**Agent readiness 21.0** — agent-aware
 
-**FN:** Kin Lane
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | — |
 
-**Email:** kin@apievangelist.com
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/liblab/](https://apis.io/providers/liblab/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Liblab: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/liblab/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
